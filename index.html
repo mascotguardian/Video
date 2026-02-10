@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>G00079 Video</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  video {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>G00079 Video</h1>
+
+<video id="video" controls>
+  <source src="G00079_Fault.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="controls">
+  <button onclick="seek(-5)">⏪ 5s</button>
+  <button onclick="seek(5)">⏩ 5s</button>
+</div>
+
+<p>
+  <a href="G00079_Fault.mp4" download>
+    Download G00079 Video (MP4)
+  </a>
+</p>
+
+<script>
+  const video = document.getElementById('video');
+  function seek(seconds) {
+    video.currentTime = Math.max(0, video.currentTime + seconds);
+  }
+</script>
+
+</body>
+</html>
